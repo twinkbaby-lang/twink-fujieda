@@ -26,7 +26,8 @@ nav{display:flex;align-items:center;gap:20px;font-weight:800;font-size:.88rem;co
 .hero-grid{position:relative;display:block;min-height:560px;border-radius:32px;overflow:hidden;box-shadow:var(--shadow);background:#f7fbff}
 .hero-photo{position:absolute;inset:0;z-index:0;border-radius:0;overflow:hidden;box-shadow:none}
 .hero-photo::after{content:"";position:absolute;inset:0 auto 0 0;width:76%;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.93) 34%,rgba(255,255,255,.80) 50%,rgba(255,255,255,.52) 64%,rgba(255,255,255,.22) 78%,rgba(255,255,255,0) 100%);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 58%,rgba(0,0,0,.86) 70%,rgba(0,0,0,.45) 86%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 58%,rgba(0,0,0,.86) 70%,rgba(0,0,0,.45) 86%,transparent 100%)}
-.hero-photo img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:center center}
+.hero-main-img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:center center}
+.hero-title-mobile{display:none}
 .hero-copy{position:relative;z-index:2;width:53%;min-height:560px;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:42px 24px 42px 42px}
 .hero-title-img{width:min(100%,560px)}
 .hero-copy p{font-size:1.02rem;margin:0;text-shadow:0 1px 8px rgba(255,255,255,.9)}
@@ -112,14 +113,15 @@ footer{background:#eef8fc;padding:22px 0;text-align:center;color:#708592;font-si
   section{padding:52px 0}
   .hero{padding:16px 0 46px;background:linear-gradient(180deg,#fff,#f8fcff)}
   .hero-grid{position:relative;min-height:auto;border-radius:24px;overflow:visible;box-shadow:none;background:transparent;display:flex;flex-direction:column}
-  .hero-copy{display:contents}
-  .hero-title-img{position:absolute;top:18px;left:16px;z-index:3;order:initial;width:min(52%,240px);max-width:none;transform:none;filter:drop-shadow(0 2px 8px rgba(255,255,255,.95));margin:0}
   .hero-photo{position:relative;inset:auto;order:1;width:100%;aspect-ratio:16/9;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
   .hero-photo::after{width:62%;background:linear-gradient(90deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.75) 42%,rgba(255,255,255,.40) 70%,rgba(255,255,255,0) 100%);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 58%,rgba(0,0,0,.60) 78%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 58%,rgba(0,0,0,.60) 78%,transparent 100%)}
-  .hero-photo img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:center center}
-  .hero-copy p{order:2;font-size:.94rem;margin:18px 8px 0}
-  .hero-highlight{order:3;font-size:.95rem;padding:14px 16px;background:#fff0bf;margin:0 8px}
-  .actions{order:4;flex-direction:column;margin:0 8px}
+  .hero-main-img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:center center}
+  .hero-title-mobile{display:block;position:absolute;top:18px;left:16px;z-index:3;width:min(52%,240px);max-width:none;filter:drop-shadow(0 2px 8px rgba(255,255,255,.95));margin:0}
+  .hero-copy{position:relative;order:2;width:100%;min-height:0;display:flex;flex-direction:column;justify-content:flex-start;gap:14px;padding:18px 8px 0}
+  .hero-title-img{display:none}
+  .hero-copy p{font-size:.94rem;margin:0}
+  .hero-highlight{font-size:.95rem;padding:14px 16px;background:#fff0bf;margin:0}
+  .actions{flex-direction:column;margin:0}
   .btn{width:100%}
   .reason-grid{display:flex;overflow-x:auto;gap:14px;padding-bottom:10px;scroll-snap-type:x mandatory;scrollbar-width:none}
   .reason-grid::-webkit-scrollbar,.class-grid::-webkit-scrollbar,.price-grid::-webkit-scrollbar{display:none}
@@ -135,7 +137,7 @@ footer{background:#eef8fc;padding:22px 0;text-align:center;color:#708592;font-si
 }
 @media (max-width:520px){
   .container{width:calc(100% - 20px)}
-  .hero-title-img{top:14px;left:12px;width:min(53%,210px)}
+  .hero-title-mobile{top:14px;left:12px;width:min(53%,210px)}
   .title-img{max-width:100%}
   .class-card{min-width:82%}
   .reason-card{min-width:86%}
