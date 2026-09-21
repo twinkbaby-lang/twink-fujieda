@@ -83,6 +83,10 @@ section{padding:66px 0}
 .name-tag{display:inline-block;background:var(--pink);color:#fff;border-radius:999px;padding:8px 16px;font-weight:900;margin-top:14px}
 .rep-card h3,.teachers-card h3{font-family:'M PLUS Rounded 1c';color:var(--blue-deep);font-size:1.06rem;margin:14px 0 8px}
 .rep-card p,.teachers-card p{font-size:.92rem;margin:0;line-height:1.75}
+@media (min-width:961px){
+  .img-box.rep,.img-box.teacher{height:340px}
+  .teachers-card h3{margin-top:72px}
+}
 .faq{background:#fff}
 details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0 18px;margin:10px 0;box-shadow:0 5px 14px rgba(55,97,125,.05)}
 summary{cursor:pointer;padding:16px 0;font-weight:900;color:#185f93}
